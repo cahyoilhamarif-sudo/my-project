@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.btn {
+  display: inline-block;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: 500;
+  text-align: center;
+  color: $color-white;
+}
+
+.btn--sm {
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.btn--md {
+  padding: 12px 18px;
+  font-size: 16px;
+}
+
+.btn--black {
+  color: $color-white;
+  border-color: $color-black;
+  background-color: $color-black;
+}
+
+.btn--white {
+  color: map.get($color-neutral, 800);
+  border-color: map.get($color-neutral, 200);
+  background-color:$color-white;
+}
+
+.btn--expanded {
+  display: block;
+}

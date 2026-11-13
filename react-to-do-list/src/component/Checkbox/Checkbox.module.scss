@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '@/assets/styles/abstract/' as *;
+
+.checkbox {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid map.get($color-neutral, 200);
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.checked {
+    background-image: url('./src/assets/images/icon-check.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: #0088ff;
+  }

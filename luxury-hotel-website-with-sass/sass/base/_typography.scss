@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+.eyebrow {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &--yellow {
+    color: $color-accent;
+  }
+
+  &--white {
+    margin-bottom: 8px;
+    color: $color-white;
+  }
+}
+

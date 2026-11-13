@@ -1,0 +1,127 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '@/assets/styles/abstract/' as *;
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 56px;
+  padding: 18px 18px;
+  border-radius: map.get($border-radius, 'md');
+  border: 1px solid $color-border;
+
+  &:hover {
+    .actions {
+      display: flex;
+    }
+  }
+}
+
+.completed {
+    background: map.get($color-neutral, 50);
+}
+
+.editing {
+  .content {
+    display: none;
+    }
+
+  .form {
+    display: flex;
+  }
+}
+
+.label {
+  flex-grow: 1;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: math.div(19px, 16px);
+  cursor: pointer;
+}
+
+.completed.taskItem {
+  text-decoration: line-through;
+}
+
+.form {
+  display: none;
+  align-items: center;
+  max-width: 524px;
+  width: 100%;
+  gap: 12px;
+
+  &Input {
+    padding: 4px 8px;
+    flex: 1;
+    border-radius: 8px;
+    border: 1px solid #0088FF;
+    text-decoration: none;
+  }
+}
+
+.actions {
+  display: none;
+  position: relative;
+  flex-grow: 0;
+  right: 0;
+  gap: 12px;
+}
+
+.actionsInput {
+  display: flex;
+  position: relative;
+  flex-grow: 0;
+  right: 0;
+  gap: 12px;
+}
+
+.action {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  border: none;
+}
+
+.confirm {
+  background-image: url('@/assets/images/icon-check.svg');
+  cursor: pointer;
+
+  &:hover {
+  transform:scale(1.1);
+  }
+}
+
+.cancel {
+  background-image: url('@/assets/images/icon-x.svg');
+  cursor: pointer;
+
+  &:hover {
+  transform:scale(1.1);
+  }
+}
+
+.content {
+  display: flex;
+  gap: 12px;
+  max-width: 524px;
+  width: 100%;
+} 
+
+.edit {
+  background-image: url('@/assets/images/icon-pen-square.svg');
+  cursor: pointer;
+
+  &:hover {
+    transform:scale(1.1);
+  }
+}
+
+.delete {
+  background-image: url('@/assets/images/icon-trash.svg');
+  cursor: pointer;
+  
+  &:hover {
+    transform:scale(1.1);
+  }
+}

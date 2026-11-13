@@ -1,0 +1,35 @@
+@use 'sass:map';
+
+$color-white: #ffffff;
+
+$color-neutral: (
+  50: #f4f4f4,
+  100: #efefef,
+  200: #d2d2d2,
+  300: #b5b5b5,
+  400: #989898,
+  500: #7e7e7e,
+  600: #646464,
+  700: #4a4a4a,
+  800: #343434,
+  900: #1e1e1e,
+);
+
+
+$color-border: map.get($color-neutral, 100);
+
+$font-stack-body: Inter, Roboto, Helvetica, Arial, sans-serif;
+
+$font-size-base: 16px;
+
+$margin-horizontal: 18px;
+
+$border-radius: (
+  'sm': 4px,
+  'md': 8px,
+  'lg': 12px,
+  'xl': 16px,
+  '2xl': 20px,
+  '3xl': 24px,
+  );
+  

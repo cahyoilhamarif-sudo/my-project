@@ -1,0 +1,58 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 12px 0;
+  background-color: $color-white;
+
+  &__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__humberger--btn {
+    display: flex;
+    padding: 12px;
+    border-radius: 8px;
+  }
+  
+  @include breakpoints(md) {
+    &__content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    }
+
+    &__list {
+    display: flex;
+    align-items: center;
+    }
+
+    &__item {
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+
+    &__devider {
+      width: 1px;
+      height: 44px;
+      background-color: map.get($color-neutral, 200);
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+}

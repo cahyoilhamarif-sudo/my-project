@@ -1,0 +1,49 @@
+@use 'sass:map';
+@use '../abstract' as * ;
+
+html {
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-stack-body;
+  font-size: $font-size-base;
+  line-height: 1.4;
+  color: map.get($color-neutral, 900);
+  background-color: map.get($color-neutral, 100);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: map.get($color-neutral, 700);
+}

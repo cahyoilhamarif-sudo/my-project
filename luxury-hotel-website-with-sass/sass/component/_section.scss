@@ -1,0 +1,33 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.section {
+  padding: 40px 0;
+  
+  @include breakpoints(md) {
+    padding: 60px 0;
+  }
+
+  &--unmuted {
+    background-color: $color-white;
+  }
+
+  &--muted {
+    background-color: map.get($color-neutral, 50); 
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 624px;
+    margin: 0 auto;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: map.get($color-neutral, 900);
+  }
+
+  &__title {
+    letter-spacing: -0.5px;
+    color: map.get($color-neutral, 900);
+  }
+}

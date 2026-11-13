@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use '@/assets/styles/abstract/' as *;
+
+.panel {
+  height: 419px;
+  border-radius: map.get($border-radius, 'xl');
+  background: $color-white;
+  border: 1px solid $color-border;
+
+  &Header {
+    padding: 12px;
+    border-bottom: 1px solid $color-border;
+  }
+
+  &Body {
+    height: 359px;
+    padding: 12px;
+    overflow-y: scroll;
+  }
+}

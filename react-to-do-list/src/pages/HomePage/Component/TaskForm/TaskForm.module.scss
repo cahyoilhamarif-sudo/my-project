@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '@/assets/styles/abstract/' as *;
+
+.taskInput {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px $margin-horizontal;
+  }
+
+.taskForm {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &Field {
+    width: 436px;
+    border: none;
+    background: none;
+    outline: none;
+    font-weight: 500;
+  }
+
+  &Icon {
+    width: 18px;
+    height: 18px;
+  }
+}

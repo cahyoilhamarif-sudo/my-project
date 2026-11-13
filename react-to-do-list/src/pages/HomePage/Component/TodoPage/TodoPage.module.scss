@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '@/assets/styles/abstract/' as *;
+
+.todoPage {
+  margin-top: 10vh;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: map.get($color-neutral, 50);
+  border-radius: map.get($border-radius, '3xl');
+  border: 1px solid $color-white;
+}
+
+.header {
+    display: block;
+    padding: $margin-horizontal;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+.body {
+    display: block;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+  }

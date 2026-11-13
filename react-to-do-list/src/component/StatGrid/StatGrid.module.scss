@@ -1,0 +1,52 @@
+@use 'sass:map';
+@use '@/assets/styles/abstract/' as *;
+
+.statGrid {
+    display: flex;
+    gap: 6px;
+    padding: 0 18px;
+    margin-bottom: 10px;
+  }
+
+.statWidget {
+  flex: 1;
+  padding: 12px;
+  border-radius: map.get($border-radius, 'xl');
+
+  &Icon {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  &Body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &Label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &Value {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 40px;
+  }
+
+  &Lead {
+    background-image: linear-gradient(to bottom, #cf8bf9, #b264fd);
+    color: #f2c7ff;
+  }
+
+  &Info {
+    background-image: linear-gradient(to bottom, #5f98ff, #1865d5);
+    color: #82d0ff;
+  }
+
+  &Success {
+    background-image: linear-gradient(to bottom, #85e980, #4d9a44);
+    color: #d4f5d0;
+  }
+}

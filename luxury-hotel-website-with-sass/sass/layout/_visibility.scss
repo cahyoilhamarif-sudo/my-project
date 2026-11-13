@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+@use "sass:map";
+
+@each $bp, $_width in $breakpoints {
+  @if $bp == sm {
+    @media (max-width: #{map.get($breakpoints, md) - 1px}) {
+      .hide-for-#{$bp} {
+        display: none !important;
+      }
+    }
+  } @else {
+      @include breakpoints($bp) {
+      .hide-for-#{$bp} {
+        display: none !important;
+       }
+    }
+  }
+}

@@ -1,0 +1,423 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.section-hero {
+  margin-top: 68px;
+  background-image: url('../img/bg-hero.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $color-white;
+
+  &__content {
+    padding: 93px 0;
+    max-width: 100%;
+    text-align: center;
+
+    @include breakpoints(md) {
+      padding: 83.5px 0;
+      max-width: 592px;
+      text-align: left;
+    }
+  }
+
+  &__eyebrow {
+    margin-bottom: 8px;
+  }
+
+  &__header {
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+
+  &__desc {
+    margin-bottom: 32px;
+    max-width: 488px;
+    font-size: 14px;
+
+    @include breakpoints(md) {
+      font-size: 18px;
+    }
+  }
+}
+
+.section-clients {
+  &__title {
+    margin-bottom: 32px;
+    letter-spacing: -0.48px;
+    font-size: 18px;
+    font-weight: 500;
+    color: map.get($color-neutral, 900);
+    text-align: center;
+
+    @include breakpoints(md) {
+      font-size: 24px;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    @include breakpoints(md) {
+      flex-direction: row;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    width: 100%;
+    padding: 18px 0;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    background-color: map.get($color-neutral, 50);
+    @include breakpoints(md) {
+      flex: 1;
+      align-self: auto;
+    }
+  }
+}
+
+.section-services {
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  color: map.get($breakpoints, 700);
+
+  @include breakpoints(md) {
+    text-align: left;
+  }
+
+  &__eyebrow {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__item-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+
+    @include breakpoints(md) {
+      align-items: start;
+    }
+  }
+
+  &__item-service {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  &__service-title {
+    color: map.get($color-neutral, 700);
+    flex: 1;
+  }
+
+  &__desc {
+    color: map.get($breakpoints, 700);
+    margin-bottom: 24px;
+  }
+
+  &__btn {
+    margin-bottom: 32px;
+
+    @include breakpoints(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-services {
+    border-radius: 6px;
+    object-fit: cover;
+    aspect-ratio: 524 / 500;
+    width: 100%;
+  }
+}
+
+.section-features {
+  &__inner {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    gap: 20px;
+    padding: 20px;
+    background-color: $color-white;
+
+    @include breakpoints(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__card-icon {
+    max-width: 48px;
+  }
+
+  &__card-header {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.4px;
+    color: map.get($color-neutral, 900);
+  }
+
+  &__card-desc {
+    @include breakpoints(md) {
+      height: 3lh;
+    }
+
+  }
+}
+
+.section-rooms {
+  &__inner {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+
+  &__card-img {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__card-header {
+    height: 2lh;
+    margin-bottom: 8px;
+    letter-spacing: -0.4px;
+    font-size: 24px;
+    font-weight: 600;
+    color: map.get($color-neutral, 900);
+  }
+
+  &__card-desc {
+    margin-bottom: 24px;
+  }
+
+  &__card-btn {
+    margin-bottom: 32px;
+
+    @include breakpoints(md) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.section-faq {
+  &__box {
+    margin: 0 auto;
+    max-width: 710px;
+    padding: 32px 16px 16px 16px;
+    border-radius: 12px;
+    background-color: $color-white;
+  }
+
+  &__header {
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+
+  &__question-item { 
+    padding: 16px;
+  }
+
+  &__question-item:not(:last-child) { 
+    margin-bottom: 8px;
+    border-bottom: 1px solid map.get($color-neutral, 200);
+  }
+
+
+  &__question-title {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: map.get($color-neutral, 900);
+  }
+
+  &__container-question {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__item-answer {
+    display: none;
+    font-size: 14px;
+  }
+}
+
+.cheveron-down--expanded {
+  transform: rotate(180deg);
+}
+
+.item-answer--expanded {
+  display: block;
+}
+
+.section-aminities {
+  display: flex;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url(../img/bg-aminities.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include breakpoints(md) {
+    text-align: start;
+  }
+
+  &__header {
+    margin-bottom: 16px;
+    color: $color-white;
+  }
+
+  &__desc {
+    margin-bottom: 32px;
+    font-size: 18px;
+    color: $color-white;
+  }
+
+  &__btn {
+    margin-bottom: 32px;
+
+    @include breakpoints(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__card {
+    padding: 20px;
+    border-radius: 6px;
+    background-color: $color-white;
+  }
+
+  &__card-eyebrow {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__line {
+    margin-bottom: 20px;
+  }
+
+  &__list-aminities {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__card-item {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__card-item-title {
+    font-size: 18px;
+    color: map.get($color-neutral, 900);
+  }
+}
+
+.section-footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 0;
+
+  @include breakpoints(md) {
+    padding: 64px 0;
+  }
+  
+
+  &__logo-hotel-luxury {
+    margin-bottom: 16px; 
+  }
+
+  &__copyright {
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  &__btn-lang {
+    display: flex;
+    margin-bottom: 40px;
+    gap: 6px;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid map.get($color-neutral, 200);
+    background-color: $color-white;
+
+    @include breakpoints(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__lang {
+    line-height: 14px;
+    font-size: 12px;
+    color: map.get($color-neutral, 700);
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__wrapper-explore {
+    flex: 1 1 50%;
+    font-size: 14px;
+
+    @include breakpoints(md) {
+      flex: 1;
+    }
+  }
+
+  &__wrapper-policies {
+    margin-bottom: 32px;
+    flex: 1 1 50%;
+    font-size: 14px;
+
+    @include breakpoints(md) {
+      flex: 1;
+      margin-bottom: 0;
+    }
+  }
+
+  &__wrapper-connect {
+    flex: 1 1 100%;
+    font-size: 14px;
+
+    @include breakpoints(md) {
+      flex: 1;
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: map.get($color-neutral, 900);
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  &__wrapper-soc-med {
+    display: flex;
+    gap: 16px;
+  }
+}
+

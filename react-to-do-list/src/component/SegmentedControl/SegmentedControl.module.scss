@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '@/assets/styles/abstract' as *;
+
+.segmentedControl {
+  display: inline flex;
+  $padding: 2px;
+  $border-radius: map.get($border-radius, 'md');
+
+  padding: 2px;
+  border-radius: $border-radius;
+  background-color: map.get($color-neutral, 50);
+}
+
+.segment {
+  border: none;
+  padding: 5px 14px;
+  border-radius: 6px;
+  background: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: $color-white;
+  color: inherit;
+  box-shadow: 0 2px 4px 0 rgba(145, 145, 145, 0 );
+}
